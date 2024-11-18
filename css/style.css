@@ -34,6 +34,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -144,7 +145,7 @@ a {
 }
 
 .list--tick {
-  list-style-image: url(../icons/tick.svg);
+  list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
 }
 
@@ -163,6 +164,7 @@ a {
   width: 40px;
   height: 40px;
 }
+
 .icon--small {
   width: 30px;
   height: 30px;
@@ -175,6 +177,7 @@ a {
 .icon--white {
   fill: #fff;
 }
+
 .icon-container {
   background: #f3f9fa;
   width: 64px;
@@ -184,9 +187,11 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 .icon-container--accent {
   background: var(--color-accent);
 }
+
 /* Buttons */
 .btn {
   border-radius: 40px;
@@ -195,10 +200,18 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -239,10 +252,11 @@ a {
   color: #fff;
 }
 
-.btn--streched {
+.btn--stretched {
   padding-left: 6rem;
   padding-right: 6rem;
 }
+
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -277,7 +291,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -350,7 +364,7 @@ a {
 }
 
 .plan--popular .card__header::before {
-  content: url(../icons/popular.svg);
+  content: url(../images/popular.svg);
   width: 40px;
   display: inline-block;
   position: absolute;
@@ -391,7 +405,6 @@ a {
 .media__image {
   margin-top: 1rem;
 }
-
 /* Quotes */
 .quote {
   font-size: 3rem;
@@ -399,48 +412,59 @@ a {
   color: var(--color-body-darker);
   line-height: 1.3;
 }
+
 .quote__text::before {
   content: open-quote;
 }
+
 .quote__text::after {
   content: close-quote;
 }
+
 .quote__author {
   font-size: 3rem;
   font-weight: 500;
   font-style: normal;
   margin-bottom: 0;
 }
+
 .quote__organization {
   color: var(--color-headings);
   opacity: 0.4;
   font-size: 2rem;
   font-style: normal;
 }
+
 .quote__line {
   position: relative;
   bottom: 10px;
 }
+
 @media screen and (min-width: 1024px) {
   .quote {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
+
   .quote__author {
-    font-size: 2.4;
+    font-size: 2.4rem;
   }
+
   .quote__organization {
     font-size: 1.6rem;
   }
 }
+
 /* Grids */
 .grid {
   display: grid;
 }
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
@@ -451,59 +475,79 @@ a {
 .testimonial {
   padding: 3rem;
 }
+
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
+
 .testimonial__image > img {
   width: 100%;
 }
+
 .testimonial__image > .icon-container {
   position: absolute;
   top: 3rem;
   right: -32px;
 }
+
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
   }
+
   .testimonial .quote {
     margin-left: 6rem;
+    margin-right: 0;
   }
 }
+
 /* Callouts */
 .callout {
   padding: 4rem;
   border-radius: 5px;
 }
+
 .callout--primary {
   background: var(--color-primary);
   color: #fff;
 }
-.callout__header {
+
+.callout__heading {
   color: #fff;
   margin-top: 0;
   font-size: 3rem;
 }
+
 .callout .btn {
   justify-self: center;
   align-self: center;
 }
+
 .callout__content {
   text-align: center;
 }
+
 @media screen and (min-width: 768px) {
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
+
   .callout__content {
     text-align: left;
   }
+
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
   }
 }
+
 /* Collapsibles */
 .collapsible__header {
   display: flex;
@@ -535,7 +579,6 @@ a {
   max-height: 100vh;
   opacity: 1;
 }
-
 /* Blocks */
 .block {
   --padding-vertical: 6rem;
@@ -573,6 +616,7 @@ a {
   max-width: 1140px;
   margin: 0 auto;
 }
+
 /* Navigation Bar */
 .nav {
   background: #000;
@@ -635,6 +679,7 @@ a {
     border: 0;
   }
 }
+
 /* Hero */
 .hero {
   clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
@@ -659,5 +704,30 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain Block */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
